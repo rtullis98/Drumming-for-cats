@@ -1,0 +1,45 @@
+{
+  "-MTlskfxY3SLtISeCLSt": {
+    "firebaseKey": "-MTlskfxY3SLtISeCLSt",
+    "name": "Franklin",
+    "image": "https://s3.amazonaws.com/petcentral.com/wp-content/uploads/2016/09/01160419/black-cat-1.jpg",
+    "phone": "123-456-7890",
+    "email": "franklin@floof.com",
+    "isTeacher": false,
+    "description": "I've got my paradiddles down but I can't groove if my 9 lives depended on it. I'd like to learn how to solo better as well.",
+    "availability": "Only at 3:00 a.m. when my humans are asleep."
+  },
+
+  "-MJslffkL7EKlALoECGw": {
+    "firebaseKey": "-MJslffkL7EKlALoECGw",
+    "name": "Doris",
+    "image": "https://th.bing.com/th/id/OIP.N9OhReMln8UlQmOKxtnHNgHaFy?pid=ImgDet&rs=1",
+    "phone": "098-765-4321",
+    "email": "doris@bean.com",
+    "isTeacher": false,
+    "description": "I'm only good at shedding. Need to learn how to play with a band.",
+    "availability": "Anytime Monday through Wednesday."
+  },
+
+  "-TTlskbnY6SLtISeXLSv": {
+    "firebaseKey": "-TTlskbnY6SLtISeXLSv",
+    "name": "Peepo",
+    "image": "https://th.bing.com/th/id/R.f83c07d0f3b9b5b675978840fb853a94?rik=yKuXjlBMWPzsRA&riu=http%3a%2f%2f4.bp.blogspot.com%2f-dZ4VlGvH9vc%2fUBlJXsjGreI%2fAAAAAAAARvA%2fSKXP-99TZaM%2fs1600%2ffunny-cat-pictures-009-045.jpg&ehk=grXffVQODzBpt9kVJIK8a8AiYziWaeb6tev7AIOtw4I%3d&risl=&pid=ImgRaw&r=0",
+    "phone": "820-028-9382",
+    "email": "peepothedrumteacher@cats.com",
+    "isTeacher": true,
+    "description": "I'm an expert on groove and feel within a band. Have the fundamentals but need to learn how to apply them? Contact me!",
+    "availability": "Anytime Wednesday through Friday."
+  },
+
+  "-XTllobnY2SLoISeLOTm": {
+    "firebaseKey": "-XTllobnY2SLoISeLOTm",
+    "name": "Mr. Fluffers",
+    "image": "https://media.istockphoto.com/photos/cat-with-drum-1-picture-id694819534?k=6&m=694819534&s=170667a&w=0&h=jU41dgYONwxzvQ9y8aeVPuaXtp_a0kVBA8yyB566HKM=",
+    "phone": "296-825-0481",
+    "email": "mrfluffers@drumworld.com",
+    "isTeacher": true,
+    "description": "The king of solos. I play with all nine of my lives during every solo.",
+    "availability": "Any day from 1:00 a.m. until 7:00 a.m."
+  }    
+}
