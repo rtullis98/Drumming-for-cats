@@ -1,22 +1,40 @@
-// import { Button } from 'react-bootstrap'; // TODO: COMMENT IN FOR AUTH
-// import { signOut } from '../utils/auth'; // TODO: COMMENT IN FOR AUTH
-// import { useAuth } from '../utils/context/authContext'; // TODO: COMMENT IN FOR AUTH
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { Button } from 'react-bootstrap';
+import { getAppointments } from '../api/appointmentData';
+import { useAuth } from '../utils/context/authContext';
+import AppointmentCard from '../components/AppointmentCard';
 
 function Home() {
-  // const { user } = useAuth(); // TODO: COMMENT IN FOR AUTH
+  // TODO: Set a state for appointments
+  const [appointments, setAppointments] = useState([]);
 
-  const user = { displayName: 'Dr. T' }; // TODO: COMMENT OUT FOR AUTH
+  // TODO: Get user ID using useAuth Hook
+  const { user } = useAuth();
+
+  // TODO: create a function that makes the API call to get all the appointments
+  const getAllTheAppointments = () => {
+    getAppointments(user.uid).then(setAppointments);
+  };
+
+  // TODO: make the call to the API to get all the appointments on component render
+  useEffect(() => {
+    getAllTheAppointments();
+  }, []);
+
   return (
-    <div
-      className="text-center d-flex flex-column justify-content-center align-content-center"
-      style={{
-        height: '90vh',
-        padding: '30px',
-        maxWidth: '400px',
-        margin: '0 auto',
-      }}
-    >
-      <h1>Hello {user.displayName}! </h1>
+    <div className="text-center my-4">
+      <Link href="/appointment/new" passHref>
+        <Button>Create An Appointment</Button>
+      </Link>
+      <div className="d-flex flex-wrap">
+        {/* TODO: map over appointments here using AppointmentCard component */}
+        {appointments.map((appointment) => (
+          <AppointmentCard key={appointment.firebaseKey} appointmentObj={appointment} onUpdate={getAllTheAppointments} />
+        ))}
+      </div>
+
     </div>
   );
 }
