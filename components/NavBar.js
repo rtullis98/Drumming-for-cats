@@ -7,7 +7,7 @@ import {
   Navbar, Container, Nav,
 } from 'react-bootstrap';
 
-export default function NavBar() {
+function NavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -46,3 +46,5 @@ NavBar.propTypes = {
     photoURL: PropTypes.string,
   }).isRequired,
 };
+
+export default NavBar;

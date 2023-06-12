@@ -19,7 +19,6 @@ function Cats() {
 
   return (
     <div className="d-flex flex-wrap">
-      {/* TODO: map over appointments here using AppointmentCard component */}
       {cats.map((cat) => (
         <CatCard key={cat.firebaseKey} catObj={cat} onUpdate={getAllTheCats} />
       ))}
