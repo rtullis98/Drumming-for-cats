@@ -5,7 +5,7 @@ import CatCard from '../../components/CatCard';
 // eslint-disable-next-line import/named
 import { getTeacherCat } from '../../api/catData';
 
-export default function TeacherCat() {
+function TeacherCat() {
   const { user } = useAuth();
   const [teacherCat, setTeacherCat] = useState([]);
 
@@ -24,3 +24,5 @@ export default function TeacherCat() {
     </div>
   );
 }
+
+export default TeacherCat;

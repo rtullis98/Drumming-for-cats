@@ -4,7 +4,7 @@ import { getCats } from '../api/catData';
 import { useAuth } from '../utils/context/authContext';
 import CatCard from '../components/CatCard';
 
-export default function Cats() {
+function Cats() {
   const [cats, setCats] = useState([]);
 
   const { user } = useAuth();
@@ -26,3 +26,5 @@ export default function Cats() {
     </div>
   );
 }
+
+export default Cats;

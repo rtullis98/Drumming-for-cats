@@ -6,7 +6,7 @@ import { getAppointments } from '../api/appointmentData';
 import { useAuth } from '../utils/context/authContext';
 import AppointmentCard from '../components/AppointmentCard';
 
-function Home() {
+function Appointments() {
   // TODO: Set a state for appointments
   const [appointments, setAppointments] = useState([]);
 
@@ -39,4 +39,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Appointments;

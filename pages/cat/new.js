@@ -1,6 +1,8 @@
 import React from 'react';
 import CatForm from '../../components/CatForm';
 
-export default function AddCat() {
+function AddCat() {
   return <CatForm />;
 }
+
+export default AddCat;
