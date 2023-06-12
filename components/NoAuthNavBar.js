@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+/* import React from 'react';
 import Link from 'next/link';
 import {
   Navbar, Container, Nav,
@@ -15,7 +15,6 @@ export default function NoAuthNavBar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            {/* CLOSE NAVBAR ON LINK SELECTION: https://stackoverflow.com/questions/72813635/collapse-on-select-react-bootstrap-navbar-with-nextjs-not-working */}
             <Link passHref href="/">
               <Nav.Link>Home</Nav.Link>
             </Link>
@@ -24,4 +23,4 @@ export default function NoAuthNavBar() {
       </Container>
     </Navbar>
   );
-}
+} */
