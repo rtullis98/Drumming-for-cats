@@ -4,8 +4,8 @@ import { clientCredentials } from '../utils/client';
 const dbUrl = clientCredentials.databaseURL;
 
 // GET ALL CATS
-const getCats = (uid) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/cats.json?orderBy="uid"&equalTo="${uid}"`)
+const getCats = () => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/cats.json`)
     .then((response) => {
       if (response.data) {
         resolve(Object.values(response.data));
@@ -49,7 +49,7 @@ const updateCat = (catObj) => new Promise((resolve, reject) => {
 
 // GET A SINGLE CATS'S APPOINTMENTS
 const getCatAppointments = (catFirebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${dbUrl}/appointments.json?orderBy="author_id"&equalTo="${catFirebaseKey}"`, {
+  fetch(`${dbUrl}/appointments.json?orderBy="cat_id"&equalTo="${catFirebaseKey}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'applications/json',

@@ -35,12 +35,15 @@ export default function CatForm({ obj }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (obj.firebaseKey) {
-      updateCat(formInput)
+      const updatedCats = {
+        ...formInput, firebaseKey: obj.firebaseKey,
+      };
+      updateCat(updatedCats)
         .then(() => router.push(`/cat/${obj.firebaseKey}`));
     } else {
       const payload = { ...formInput, uid: user.uid };
       createCat(payload).then(() => {
-        router.push('/cats');
+        router.push('/');
       });
     }
   };
