@@ -61,8 +61,8 @@ const getCatAppointments = (catFirebaseKey) => new Promise((resolve, reject) => 
 });
 
 // GET TEACHER CATS
-const getTeacherCat = (uid) => new Promise((resolve, reject) => {
-  fetch(`${dbUrl}/cats.json?orderBy="uid"&equalTo="${uid}"`, {
+const getTeacherCat = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/cats.json"${firebaseKey}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -70,8 +70,8 @@ const getTeacherCat = (uid) => new Promise((resolve, reject) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      const favorites = Object.values(data).filter((item) => item.favorite);
-      resolve(favorites);
+      const teachers = Object.values(data).filter((item) => item.isTeacher);
+      resolve(teachers);
     })
     .catch(reject);
 });
