@@ -98,14 +98,14 @@ export default function CatForm({ obj }) {
       <Form.Check
         className="text-white mb-3"
         type="switch"
-        id="teacher"
-        name="teacher"
+        id="isTeacher"
+        name="isTeacher"
         label="Teacher"
         checked={formInput.isTeacher}
         onChange={(e) => {
           setFormInput((prevState) => ({
             ...prevState,
-            favorite: e.target.checked,
+            isTeacher: e.target.checked,
           }));
         }}
       />
