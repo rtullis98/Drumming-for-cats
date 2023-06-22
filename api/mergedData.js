@@ -1,5 +1,5 @@
-import { getCatAppointments, getSingleCat, } from './catData';
-import { getSingleAppointment, } from './appointmentData';
+import { getSingleCat } from './catData';
+import { getSingleAppointment } from './appointmentData';
 
 // VIEW APPOINTMENT DETAILS
 const viewAppointmentDetails = (appointmentFirebaseKey) => new Promise((resolve, reject) => {
@@ -14,9 +14,9 @@ const viewAppointmentDetails = (appointmentFirebaseKey) => new Promise((resolve,
 
 // VIEW CAT DETAILS
 const viewCatDetails = (catFirebaseKey) => new Promise((resolve, reject) => {
-  Promise.all([getSingleCat(catFirebaseKey), getCatAppointments(catFirebaseKey)])
-    .then(([catObject, catAppointmentsArray]) => {
-      resolve({ ...catObject, appointments: catAppointmentsArray });
+  Promise.all([getSingleCat(catFirebaseKey)])
+    .then(([catObject]) => {
+      resolve({ ...catObject });
     }).catch((error) => reject(error));
 });
 
