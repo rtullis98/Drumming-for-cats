@@ -16,6 +16,22 @@ const getCats = () => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
+// GET TEACHER CATS
+const getTeacherCat = () => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/cats.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const teachers = Object.values(data).filter((item) => item.isTeacher);
+      resolve(teachers);
+    })
+    .catch(reject);
+});
+
 // CREATE CAT
 const createCat = (catObj) => new Promise((resolve, reject) => {
   axios.post(`${dbUrl}/cats.json`, catObj)
@@ -57,22 +73,6 @@ const getCatAppointments = (catFirebaseKey) => new Promise((resolve, reject) => 
   })
     .then((response) => response.json())
     .then((data) => resolve(Object.values(data)))
-    .catch(reject);
-});
-
-// GET TEACHER CATS
-const getTeacherCat = (firebaseKey) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/cats.json"${firebaseKey}"`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      const teachers = Object.values(data).filter((item) => item.isTeacher);
-      resolve(teachers);
-    })
     .catch(reject);
 });
 
