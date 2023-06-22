@@ -31,4 +31,4 @@ const viewCatDetails = (catFirebaseKey) => new Promise((resolve, reject) => {
 //   }).catch((error) => reject(error));
 // });
 
-export { viewAppointmentDetails, viewCatDetails, deleteCatAppointments };
+export { viewAppointmentDetails, viewCatDetails };

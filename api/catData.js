@@ -82,6 +82,5 @@ export {
   getSingleCat,
   deleteSingleCat,
   updateCat,
-  // getCatAppointments,
   getTeacherCat,
 };
