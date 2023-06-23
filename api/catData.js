@@ -17,8 +17,8 @@ const getCats = () => new Promise((resolve, reject) => {
 });
 
 // GET TEACHER CATS
-const getTeacherCat = () => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/cats.json`, {
+const getTeacherCat = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/cats.json?orderBy="firebaseKey"&equalTo="${firebaseKey}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
