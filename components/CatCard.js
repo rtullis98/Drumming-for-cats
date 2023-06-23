@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
-import { deleteCatAppointments } from '../api/mergedData';
+import { deleteSingleCat } from '../api/catData';
 
 function CatCard({ catObj, onUpdate }) {
   const deleteThisCat = () => {
     if (window.confirm(`Delete ${catObj.name}?`)) {
-      deleteCatAppointments(catObj.firebaseKey).then(() => onUpdate());
+      deleteSingleCat(catObj.firebaseKey).then(() => onUpdate());
     }
   };
 
