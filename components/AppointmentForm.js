@@ -56,8 +56,8 @@ function AppointmentForm({ obj }) {
         <Form.Control
           type="text"
           placeholder="Enter a date/time for your appointment"
-          name="apptDateTime"
-          value={formInput.appDateTime}
+          name="Appointment Date and Time"
+          value={formInput.description}
           onChange={handleChange}
           required
         />

@@ -4,8 +4,8 @@ import { clientCredentials } from '../utils/client';
 const dbUrl = clientCredentials.databaseURL;
 
 // GET APPOINTMENTS
-const getAppointments = (uid) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/appointments.json?orderBy="uid"&equalTo="${uid}"`)
+const getAppointments = () => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/appointments.json`)
     .then((response) => {
       if (response.data) {
         resolve(Object.values(response.data));

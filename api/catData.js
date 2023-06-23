@@ -47,19 +47,6 @@ const updateCat = (catObj) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-// GET A SINGLE CATS'S APPOINTMENTS
-const getCatAppointments = (catFirebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${dbUrl}/appointments.json?orderBy="cat_id"&equalTo="${catFirebaseKey}"`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'applications/json',
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => resolve(Object.values(data)))
-    .catch(reject);
-});
-
 // GET TEACHER CATS
 const getTeacherCat = (firebaseKey) => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/cats.json?orderBy="firebaseKey"&equalTo="${firebaseKey}"`, {
@@ -76,12 +63,24 @@ const getTeacherCat = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// // GET A SINGLE CATS'S APPOINTMENTS
+// const getCatAppointments = (catFirebaseKey) => new Promise((resolve, reject) => {
+//   fetch(`${dbUrl}/appointments.json?orderBy="cat_id"&equalTo="${catFirebaseKey}"`, {
+//     method: 'GET',
+//     headers: {
+//       'Content-Type': 'applications/json',
+//     },
+//   })
+//     .then((response) => response.json())
+//     .then((data) => resolve(Object.values(data)))
+//     .catch(reject);
+// });
+
 export {
   getCats,
   createCat,
   getSingleCat,
   deleteSingleCat,
   updateCat,
-  getCatAppointments,
   getTeacherCat,
 };
