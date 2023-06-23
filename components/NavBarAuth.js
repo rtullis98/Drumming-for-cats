@@ -18,15 +18,12 @@ export default function NavBarAuth() {
           <Nav className="me-auto">
             {/* CLOSE NAVBAR ON LINK SELECTION: https://stackoverflow.com/questions/72813635/collapse-on-select-react-bootstrap-navbar-with-nextjs-not-working */}
             <Link passHref href="/">
-              <Nav.Link>Home</Nav.Link>
+              <Nav.Link>Cats</Nav.Link>
             </Link>
             <Link passHref href="/appointments">
               <Nav.Link>Appointments</Nav.Link>
             </Link>
-            <Link passHref href="/cats">
-              <Nav.Link>All Cats</Nav.Link>
-            </Link>
-            <Link passHref href="/cat/isTeacher">
+            <Link passHref href="/teacher">
               <Nav.Link>Teacher Cats</Nav.Link>
             </Link>
             <Link passHref href="/appointment/new">
