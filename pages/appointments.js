@@ -26,7 +26,7 @@ function Appointments() {
   return (
     <div className="text-center my-4">
       <Link href="/appointment/new" passHref>
-        <Button>Create An Appointment</Button>
+        <Button style={{ background: 'black', color: 'white' }}>Create Appointment</Button>
       </Link>
       <div className="d-flex flex-wrap">
         {/* TODO: map over appointments here using AppointmentCard component */}

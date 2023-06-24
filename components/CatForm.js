@@ -50,7 +50,7 @@ export default function CatForm({ obj }) {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <h2 className="text-white mt-5">{obj.firebaseKey ? 'Update' : 'Create'} Cat</h2>
+      <h2 className="text-black mt-5">{obj.firebaseKey ? 'Update' : 'Create'} Your Cat Profile</h2>
       <FloatingLabel controlId="floatingInput1" label="Paste the link to an image of your cat" className="mb-3">
         <Form.Control
           type="url"
@@ -132,7 +132,7 @@ export default function CatForm({ obj }) {
         }}
       />
 
-      <Button variant="primary" type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Cat
+      <Button variant="primary" type="submit" style={{ background: 'black', color: 'white' }}>{obj.firebaseKey ? 'Update' : 'Create'} Cat
       </Button>
     </Form>
 
