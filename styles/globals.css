@@ -18,5 +18,80 @@ a {
 }
 
 body {
-  background-color: #f4e8ab;
+  background-color: #aea7c6;
+}
+.appointment-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+/* Additional styling for spacing and alignment */
+.text-black {
+  color: black;
+}
+
+.ms-5 {
+  margin-left: 1.25rem;
+}
+
+h3, h6 {
+  margin: 0.5rem 0;
+}
+
+hr {
+  margin: 1rem 0;
+}
+
+.cat-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+.appointments-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Additional styling for spacing and alignment */
+.text-black {
+  color: black;
+}
+
+.ms-5 {
+  margin-left: 1.25rem;
+}
+
+h2, h4 {
+  margin: 0.5rem 0;
+}
+
+hr {
+  margin: 1rem 0;
 }

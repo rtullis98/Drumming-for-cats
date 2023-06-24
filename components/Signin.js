@@ -13,8 +13,9 @@ function Signin() {
         margin: '0 auto',
       }}
     >
-      <h1>Hi there!</h1>
-      <p>Click the button below to login!</p>
+      <h1>Hello friends!</h1>
+      <p>Drumming for Cats is a drumming platform made for cats, helping funky felines of all shapes and sizes stay connected and organized with other drummers.</p>
+      <p>Click the button below to join our community!</p>
       <Button type="button" size="lg" className="copy-btn" onClick={signIn}>
         Sign In
       </Button>

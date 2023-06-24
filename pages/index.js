@@ -22,7 +22,7 @@ function Cats() {
   return (
     <div className="text-center my-4">
       <Link href="/cat/new" passHref>
-        <Button variant="dark">Add A Cat</Button>
+        <Button variant="dark">Create your own Cat!</Button>
       </Link>
       <div className="d-flex flex-wrap">
         {cats.map((cat) => (
