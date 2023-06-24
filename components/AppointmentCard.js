@@ -15,7 +15,7 @@ function AppointmentCard({ appointmentObj, onUpdate }) {
   return (
     <Card style={{ width: '18rem', margin: '10px' }}>
       <Card.Body>
-        <Card.Title>{appointmentObj.cat_id}</Card.Title>
+        <Card.Title>{appointmentObj.apptDateTime}</Card.Title>
         {/* DYNAMIC LINK TO VIEW THE APPOINTMENT DETAILS  */}
         <Link href={`/appointment/${appointmentObj.firebaseKey}`} passHref>
           <Button variant="primary" className="m-2">VIEW</Button>
