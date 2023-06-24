@@ -9,7 +9,7 @@ import { getCats } from '../api/catData';
 import { createAppointment, updateAppointment } from '../api/appointmentData';
 
 const initialState = {
-  appDateTime: '',
+  apptDateTime: '',
   email: '',
   phone: '',
   reason: '',
@@ -52,21 +52,21 @@ function AppointmentForm({ obj }) {
     <Form onSubmit={handleSubmit}>
       <h2 className="text-white mt-5">{obj.firebaseKey ? 'Update' : 'Create'} Appointment</h2>
 
-      <FloatingLabel controlId="floatingInput1" label="apptDateTime" className="mb-3">
+      <FloatingLabel controlId="floatingInput1" label="Enter a date/time for your appointment" className="mb-3">
         <Form.Control
           type="text"
-          placeholder="Enter a date/time for your appointment"
-          name="Appointment Date and Time"
-          value={formInput.description}
+          placeholder="apptDateTime"
+          name="apptDateTime"
+          value={formInput.apptDateTime}
           onChange={handleChange}
           required
         />
       </FloatingLabel>
 
-      <FloatingLabel controlId="floatingInput2" label="email" className="mb-3">
+      {/* <FloatingLabel controlId="floatingInput2" label="Enter the cat's email that you are meeting with" className="mb-3">
         <Form.Control
           type="text"
-          placeholder="Enter the cat's email that you are meeting with"
+          placeholder="email"
           name="email"
           value={formInput.email}
           onChange={handleChange}
@@ -74,18 +74,18 @@ function AppointmentForm({ obj }) {
         />
       </FloatingLabel>
 
-      <FloatingLabel controlId="floatingInput2" label="phone" className="mb-3">
+      <FloatingLabel controlId="floatingInput2" label="Enter the cat's phone number that you are meeting with" className="mb-3">
         <Form.Control
           type="text"
-          placeholder="Enter the cat's phone number that you are meeting with"
+          placeholder="phone"
           name="phone"
           value={formInput.phone}
           onChange={handleChange}
           required
         />
-      </FloatingLabel>
+      </FloatingLabel> */}
 
-      <FloatingLabel controlId="floatingSelect" label="Cat">
+      <FloatingLabel controlId="floatingSelect" label="">
         <Form.Select
           aria-label="Cat"
           name="cat_id"
@@ -128,7 +128,7 @@ function AppointmentForm({ obj }) {
 
 AppointmentForm.propTypes = {
   obj: PropTypes.shape({
-    appDateTime: PropTypes.string,
+    apptDateTime: PropTypes.string,
     reason: PropTypes.string,
     email: PropTypes.string,
     phone: PropTypes.string,

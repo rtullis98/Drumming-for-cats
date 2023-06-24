@@ -51,7 +51,7 @@ export default function CatForm({ obj }) {
   return (
     <Form onSubmit={handleSubmit}>
       <h2 className="text-white mt-5">{obj.firebaseKey ? 'Update' : 'Create'} Cat</h2>
-      <FloatingLabel controlId="floatingInput1" label="Image" className="mb-3">
+      <FloatingLabel controlId="floatingInput1" label="Paste the link to an image of your cat" className="mb-3">
         <Form.Control
           type="url"
           placeholder="Enter an image url"
@@ -62,10 +62,10 @@ export default function CatForm({ obj }) {
         />
       </FloatingLabel>
 
-      <FloatingLabel controlId="floatingInput2" label="Name" className="mb-3">
+      <FloatingLabel controlId="floatingInput2" label="Enter your cat's profile name" className="mb-3">
         <Form.Control
           type="text"
-          placeholder="Enter your cat's name"
+          placeholder="Name"
           name="name"
           value={formInput.name}
           onChange={handleChange}
@@ -73,10 +73,10 @@ export default function CatForm({ obj }) {
         />
       </FloatingLabel>
 
-      <FloatingLabel controlId="floatingInput3" label="Phone" className="mb-3">
+      <FloatingLabel controlId="floatingInput3" label="Enter your cat's phone number" className="mb-3">
         <Form.Control
           type="text"
-          placeholder="Enter your cat's phone number"
+          placeholder="Phone"
           name="phone"
           value={formInput.phone}
           onChange={handleChange}
@@ -84,12 +84,34 @@ export default function CatForm({ obj }) {
         />
       </FloatingLabel>
 
-      <FloatingLabel controlId="floatingInput4" label="Email" className="mb-3">
+      <FloatingLabel controlId="floatingInput4" label="Enter your cat's email address" className="mb-3">
         <Form.Control
           type="text"
-          placeholder="Enter cat's email address"
+          placeholder="Email"
           name="email"
           value={formInput.email}
+          onChange={handleChange}
+          required
+        />
+      </FloatingLabel>
+
+      <FloatingLabel controlId="floatingInput4" label="Enter your cat's availability" className="mb-3">
+        <Form.Control
+          type="text"
+          placeholder="Availability"
+          name="availability"
+          value={formInput.availability}
+          onChange={handleChange}
+          required
+        />
+      </FloatingLabel>
+
+      <FloatingLabel controlId="floatingInput4" label="Enter your cat's bio" className="mb-3">
+        <Form.Control
+          type="text"
+          placeholder="Description"
+          name="description"
+          value={formInput.description}
           onChange={handleChange}
           required
         />

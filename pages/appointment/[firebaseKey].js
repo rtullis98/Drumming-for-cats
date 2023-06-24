@@ -18,15 +18,28 @@ export default function ViewAppointment() {
   return (
     <div className="mt-5 d-flex flex-wrap">
       <div className="d-flex flex-column">
-        {/* <img src={appointmentDetails.cat_id} alt={appointmentDetails.apptDateTime} style={{ width: '300px' }} /> */}
+        <img src={appointmentDetails.catObject?.image} alt={appointmentDetails.catObject?.apptDateTime} style={{ width: '300px' }} />
       </div>
-      <div className="text-white ms-5 details">
-        <h5>
-          {appointmentDetails.apptDateTime} by {appointmentDetails.catObject?.name}
-          {appointmentDetails.catObject?.isTeacher ? ' 🎓' : ''}
-        </h5>
-        Cat Email: <a href={`mailto:${appointmentDetails.catObject?.email}`}>{appointmentDetails.catObject?.email}</a>
-        <p>{appointmentDetails.catObject?.description || ''}</p>
+      <div className="text-black ms-5 details">
+        <h3>
+          Your cat is meeting with: {appointmentDetails.catObject?.name} {appointmentDetails.catObject?.isTeacher ? ' 🎓' : ''}
+        </h3>
+        <h6>
+          Appointment Details: {appointmentDetails.apptDateTime}
+        </h6>
+        <h6>
+          Reason for Meeting: {appointmentDetails.reason || ''}
+        </h6>
+        <hr />
+        <h3>
+          Contact {appointmentDetails.catObject?.name}
+        </h3>
+        <h6>
+          Email: {appointmentDetails.catObject?.email}
+        </h6>
+        <h6>
+          Phone: {appointmentDetails.catObject?.phone}
+        </h6>
         <hr />
       </div>
     </div>
