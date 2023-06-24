@@ -50,7 +50,7 @@ function AppointmentForm({ obj }) {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <h2 className="text-white mt-5">{obj.firebaseKey ? 'Update' : 'Create'} Appointment</h2>
+      <h2 className="text-black mt-5">{obj.firebaseKey ? 'Update' : 'Create'} Your Appointment</h2>
 
       <FloatingLabel controlId="floatingInput1" label="Enter a date/time for your appointment" className="mb-3">
         <Form.Control
@@ -121,7 +121,7 @@ function AppointmentForm({ obj }) {
       </FloatingLabel>
 
       {/* SUBMIT BUTTON  */}
-      <Button type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Appointment</Button>
+      <Button type="submit" style={{ background: 'black', color: 'white' }}>{obj.firebaseKey ? 'Update' : 'Create'} Appointment</Button>
     </Form>
   );
 }
