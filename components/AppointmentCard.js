@@ -7,7 +7,7 @@ import { deleteAppointment } from '../api/appointmentData';
 
 function AppointmentCard({ appointmentObj, onUpdate }) {
   const deleteThisAppointment = () => {
-    if (window.confirm(`Delete ${appointmentObj.cat_id}?`)) {
+    if (window.confirm(`Delete ${appointmentObj.apptDateTime}?`)) {
       deleteAppointment(appointmentObj.firebaseKey).then(() => onUpdate());
     }
   };
