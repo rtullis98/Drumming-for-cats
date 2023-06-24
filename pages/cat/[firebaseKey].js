@@ -27,11 +27,25 @@ export default function ViewCats() {
         <div className="d-flex flex-column">
           <img src={catDetails.image} alt={catDetails.name} style={{ width: '300px' }} />
         </div>
-        <div className="text-white ms-5 details">
+        <div className="text-black ms-5 details">
           <h2>{catDetails.name}
             {catDetails.isTeacher ? ' 🎓' : ''}
           </h2>
-          Email: <a href={`mailto:${catDetails.email}`}>{catDetails.email}</a>
+          <h4>
+            Email: {catDetails.email}
+          </h4>
+          <hr />
+          <h4>
+            Phone: {catDetails.phone}
+          </h4>
+          <hr />
+          <h4>
+            Availability: {catDetails.availability}
+          </h4>
+          <hr />
+          <h4>
+            Bio: {catDetails.description}
+          </h4>
           <hr />
         </div>
       </div>
